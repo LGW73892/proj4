@@ -7,7 +7,7 @@ public class Sorting {
     private static long comparison = 0;
     System.out.println("in Sorting class");
 
-    public static int getComparison() {
+    public static long getComparison() {
         return comparison;
     }
 
@@ -44,7 +44,7 @@ public class Sorting {
 
     } // selectionSort
 
-    int mergeComp = 0;
+
     public static void mergeSort(int[] arr) {
 
         // base case
