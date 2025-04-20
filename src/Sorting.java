@@ -5,7 +5,6 @@ public class Sorting {
 
 
     private static long comparison = 0;
-    System.out.println("in Sorting class");
 
     public static long getComparison() {
         return comparison;

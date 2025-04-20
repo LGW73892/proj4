@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+
 public class SortDriver {
 
     public static void main(String[] args) {
@@ -66,11 +67,7 @@ public class SortDriver {
 
     } // catch
 
-        // Print the array
-    System.out.println("Array of integers:");
-    for (int value : numArr) {
-        System.out.print(value + " ");
-    }
+
 
     System.out.println("");
     System.out.println("slection-sort (s)");
@@ -87,14 +84,47 @@ public class SortDriver {
     if (str.equals("s")) {
         System.out.println("testing selection-sort");
         Sorting.selectionSort(numArr);
-
+        for (int value : numArr) {
+            System.out.print(value + " ");
+        }
+        System.out.println("number of comparisons: " + Sorting.getComparison());
     } else if (str.equals("m")) {
         System.out.println("testing merge-sort");
 
-    } else if (str.equals("h")) {
-        System.out.println("testing heap-sort");
+        Sorting.mergeSort(numArr);
+        for (int value : numArr) {
+            System.out.print(value + " ");
+        }
+        System.out.println("number of comparisons: " + Sorting.getComparison());
 
-    } else {
+    } else if (str.equals("h")) {
+
+        Sorting.heapSort(numArr);
+        for (int value : numArr) {
+            System.out.print(value + " ");
+        }
+
+        System.out.println("number of comparisons: " + Sorting.getComparison());
+
+    } else if (str.equals("q")) {
+        Sorting.quickSortFirst(numArr,0,numArr.length-1);
+        for (int value : numArr) {
+            System.out.print(value + " ");
+        }
+
+        System.out.println("number of comparisons: " + Sorting.getComparison());
+
+
+    } else if (str.equals("r")) {
+        Sorting.quickSortRandom(numArr,0,numArr.length-1);
+        for (int value : numArr) {
+            System.out.print(value + " ");
+        }
+
+        System.out.println("number of comparisons: " + Sorting.getComparison());
+
+
+    }else {
         System.out.println("invalid command");
     } // if -> else if -> else if -> else
 
