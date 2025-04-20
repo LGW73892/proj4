@@ -72,11 +72,31 @@ public class SortDriver {
         System.out.print(value + " ");
     }
 
+    System.out.println("");
     System.out.println("slection-sort (s)");
+    System.out.println("merge-sort (m)");
+    System.out.println("heap-sort (h)");
+    System.out.println("quick-sort-fp (q)");
+    System.out.println("quick-sort-rp (r)");
+    System.out.println("Enter the algorithm: ");
 
     Scanner scan = new Scanner(System.in);
-    String str = "";
+    String str = scan.nextLine();
+    System.out.print("");
 
+    if (str.equals("s")) {
+        System.out.println("testing selection-sort");
+        Sorting.selectionSort(numArr);
+
+    } else if (str.equals("m")) {
+        System.out.println("testing merge-sort");
+
+    } else if (str.equals("h")) {
+        System.out.println("testing heap-sort");
+
+    } else {
+        System.out.println("invalid command");
+    } // if -> else if -> else if -> else
 
     } // main
 } // SortDriver
